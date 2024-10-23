@@ -1,65 +1,79 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+/* Global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
 }
 
-#loader {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-.spinner {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
+h1 {
+  font-size: 2.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* Main container */
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('bus-background.jpg') no-repeat center center/cover;
 }
 
-.hidden {
-    display: none;
+/* Interactive input box */
+.container {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
 }
 
-#content {
-    margin-top: 20px;
-    text-align: center;
+.input-box {
+  max-width: 400px;
 }
 
-#busNumber {
-    padding: 10px;
-    font-size: 16px;
+.input-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-button:hover {
-    background-color: #2980b9;
+.input-box button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-#map {
-    height: 400px;
-    width: 80%;
-    margin-top: 20px;
+.input-box button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 20px;
+  }
 }

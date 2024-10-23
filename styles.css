@@ -2,51 +2,76 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
+/* Background video */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Headline at the top */
 header {
-  background-color: #3498db;
-  color: white;
-  padding: 20px;
+  position: absolute;
+  top: 20px;
+  width: 100%;
   text-align: center;
+  z-index: 2;
 }
 
-h1 {
-  font-size: 2.5rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Main container */
+/* Input box container */
 main {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('college logo.jpg') no-repeat center center/cover;
+  z-index: 2;
 }
 
-/* Interactive input box */
-.container {
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Translucent input box */
+.input-box {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 40px;
   border-radius: 15px;
   text-align: center;
-}
-
-.input-box {
-  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .input-box h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .input-box input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 1.1rem;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -54,7 +79,7 @@ main {
 }
 
 .input-box button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 1.1rem;
   background-color: #3498db;
   color: white;
@@ -70,10 +95,15 @@ main {
 
 /* Responsive design */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
+  header h1 {
+    font-size: 2.2rem;
   }
-  .container {
+  
+  .input-box h2 {
+    font-size: 1.5rem;
+  }
+  
+  .input-box {
     padding: 20px;
   }
 }
